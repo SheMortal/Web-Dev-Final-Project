@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Final Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Company <span class="glyphicon glyphicon-remove"></span></i></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News Feed</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li class="active"><a href="#">Admin</a></li>
+                </ul>
+                <!-- Adding New User -->
+                <div class="text-right">
+                    <button type="button" class="btn btn-info btn-lg btn-success" data-toggle="modal"
+                        data-target="#myModal">Add User</button>
+                </div>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title text-danger"><strong>New User Form</strong></h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/action_page.php" class="was-validated">
+                                    <div class="form-group">
+                                        <label for="fullname">Full name:</label>
+                                        <input type="fullname" class="form-control" id="fullname" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email address:</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cellnumber">Cell number:</label>
+                                        <input type="cellnumber" class="form-control" id="cellnumber" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="landline">Landline number:</label>
+                                        <input type="landline" class="form-control" id="landline" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="home">Home address:</label>
+                                        <input type="home" class="form-control" id="home" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="kin">Next of kin:</label>
+                                        <input type="kin" class="form-control" id="kin" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nkr">Next of kin relationship:</label>
+                                        <input type="nkr" class="form-control" id="nkr" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="kino">Next of kin(number):</label>
+                                        <input type="kino" class="form-control" id="kino" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="kin">Next of kin(email address):</label>
+                                        <input type="kin" class="form-control" id="kin" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+        <!-- Main Heading -->
+        <div>
+            <h1 id="heading">Meet The Team</h1>
+        </div>
+        <!-- Main content -->
+        <main class="main">
+            <!-- Cards -->
+            <div class="card">
+                <!-- Delete Button -->
+                <div class="text-right"><button class="btn-close" data-toggle="modal" data-target="#user1Modal"><span
+                            class="glyphicon glyphicon-remove-circle"></span></button></div>
+                <img class="card-img" src="https://i.pravatar.cc/150?img=47" alt="card heading">
+                <h3>John Doe</h3>
+                <h4>Web Developer</h4>
+                <p>Email address: <a href="#"><strong>john.d@gmail.com</strong></a></p>
+                <p>Cell Number: 098 7654 321</p>
+                <p>Landline: 012 3456 789</p>
+                <button type="button" class="btn-moreI btn-success" data-toggle="modal" data-target="#thisModal">More
+                    Information</button>
+                <div class="modal" id="thisModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!--Header-->
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger">More Information</h5>
+                            </div>
+                            <!--Body-->
+                            <div class="modal-body text-primary">
+                                <p>Home address:12 Newlines Street,Cape Town</p>
+                                <p>Next of Kin:Sydney Ray</p>
+                                <p>Relationship:Mother</p>
+                                <p>Cell Number(Next of kin):091 0923 094</p>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!--Delete Modal -->
+                    <div class="modal fade" id="user1Modal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                                            class="glyphicon glyphicon-trash"></span></button>
+                                    <h4 class="modal-title">Delete User</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete user?.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <!-- Delete Button -->
+                <div class="text-right"><button class="btn-close" data-toggle="modal" data-target="#user2Modal"><span
+                            class="glyphicon glyphicon-remove-circle"></span></button></div>
+                <img class="card-img" src="https://i.pravatar.cc/150?img=47" alt="card heading">
+                <h3>John Doe</h3>
+                <h4>Web Developer</h4>
+                <p>Email address: <a href="#"><strong>john.d@gmail.com</strong></a></p>
+                <p>Cell Number: 098 7654 321</p>
+                <p>Landline: 012 3456 789</p>
+                <button type="button" class="btn-moreI btn-success" data-toggle="modal" data-target="#aModal">More
+                    Information</button>
+                <div class="modal" id="aModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!--Header-->
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger">More Information</h5>
+                            </div>
+                            <!--Body-->
+                            <div class="modal-body text-primary">
+                                <p>Home address:12 Newlines Street,Cape Town</p>
+                                <p>Next of Kin:Sydney Ray</p>
+                                <p>Relationship:Mother</p>
+                                <p>Cell Number(Next of kin):091 0923 094</p>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!--Delete Modal -->
+                    <div class="modal fade" id="user2Modal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                                            class="glyphicon glyphicon-trash"></span></button>
+                                    <h4 class="modal-title">Delete User</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete user?.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <!-- Delete Button -->
+                <div class="text-right"><button class="btn-close" data-toggle="modal" data-target="#user3Modal"><span
+                            class="glyphicon glyphicon-remove-circle"></span></button></div>
+                <img class="card-img" src="https://i.pravatar.cc/150?img=47" alt="card heading">
+                <h3>John Doe</h3>
+                <h4>Web Developer</h4>
+                <p>Email address: <a href="#"><strong>john.d@gmail.com</strong></a></p>
+                <p>Cell Number: 098 7654 321</p>
+                <p>Landline: 012 3456 789</p>
+                <button type="button" class="btn-moreI btn-success" data-toggle="modal" data-target="#bModal">More
+                    Information</button>
+                <div class="modal" id="bModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!--Header-->
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger">More Information</h5>
+                            </div>
+                            <!--Body-->
+                            <div class="modal-body text-primary">
+                                <p>Home address:12 Newlines Street,Cape Town</p>
+                                <p>Next of Kin:Sydney Ray</p>
+                                <p>Relationship:Mother</p>
+                                <p>Cell Number(Next of kin):091 0923 094</p>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!--Delete Modal -->
+                    <div class="modal fade" id="user3Modal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                                            class="glyphicon glyphicon-trash"></span></button>
+                                    <h4 class="modal-title">Delete User</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete user?.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <!-- Delete Button -->
+                <div class="text-right"><button class="btn-close" data-toggle="modal" data-target="#user4Modal"><span
+                            class="glyphicon glyphicon-remove-circle"></span></button></div>
+                <img class="card-img" src="https://i.pravatar.cc/150?img=47" alt="card heading">
+                <h3>John Doe</h3>
+                <h4>Web Developer</h4>
+                <p>Email address: <a href="#"><strong>john.d@gmail.com</strong></a></p>
+                <p>Cell Number: 098 7654 321</p>
+                <p>Landline: 012 3456 789</p>
+                <button type="button" class="btn-moreI btn-success" data-toggle="modal" data-target="#tModal">More
+                    Information</button>
+                <div class="modal" id="tModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!--Header-->
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger">More Information</h5>
+                            </div>
+                            <!--Body-->
+                            <div class="modal-body text-primary">
+                                <p>Home address:12 Newlines Street,Cape Town</p>
+                                <p>Next of Kin:Sydney Ray</p>
+                                <p>Relationship:Mother</p>
+                                <p>Cell Number(Next of kin):091 0923 094</p>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!--Delete Modal -->
+                    <div class="modal fade" id="user4Modal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                                            class="glyphicon glyphicon-trash"></span></button>
+                                    <h4 class="modal-title">Delete User</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete user?.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <!-- Delete Button -->
+                <div class="text-right"><button class="btn-close" data-toggle="modal" data-target="#user5Modal"><span
+                            class="glyphicon glyphicon-remove-circle"></span></button></div>
+                <img class="card-img" src="https://i.pravatar.cc/150?img=47" alt="card heading">
+                <h3>John Doe</h3>
+                <h4>Web Developer</h4>
+                <p>Email address: <a href="#"><strong>john.d@gmail.com</strong></a></p>
+                <p>Cell Number: 098 7654 321</p>
+                <p>Landline: 012 3456 789</p>
+                <button type="button" class="btn-moreI btn-success" data-toggle="modal" data-target="#sModal">More
+                    Information</button>
+                <div class="modal" id="sModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!--Header-->
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger">More Information</h5>
+                            </div>
+                            <!--Body-->
+                            <div class="modal-body text-primary">
+                                <p>Home address:12 Newlines Street,Cape Town</p>
+                                <p>Next of Kin:Sydney Ray</p>
+                                <p>Relationship:Mother</p>
+                                <p>Cell Number(Next of kin):091 0923 094</p>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!--Delete Modal -->
+                    <div class="modal fade" id="user5Modal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                                            class="glyphicon glyphicon-trash"></span></button>
+                                    <h4 class="modal-title">Delete User</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete user?.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <!-- Delete Button -->
+                <div class="text-right"><button class="btn-close" data-toggle="modal" data-target="#user6Modal"><span
+                            class="glyphicon glyphicon-remove-circle"></span></button></div>
+                <img class="card-img" src="https://i.pravatar.cc/150?img=47" alt="card heading">
+                <h3>John Doe</h3>
+                <h4>Web Developer</h4>
+                <p>Email address: <a href="#"><strong>john.d@gmail.com</strong></a></p>
+                <p>Cell Number: 098 7654 321</p>
+                <p>Landline: 012 3456 789</p>
+                <button type="button" class="btn-moreI btn-success" data-toggle="modal" data-target="#hModal">More
+                    Information</button>
+                <div class="modal" id="hModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!--Header-->
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger">More Information</h5>
+                            </div>
+                            <!--Body-->
+                            <div class="modal-body text-primary">
+                                <p>Home address:12 Newlines Street,Cape Town</p>
+                                <p>Next of Kin:Sydney Ray</p>
+                                <p>Relationship:Mother</p>
+                                <p>Cell Number(Next of kin):091 0923 094</p>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!--Delete Modal -->
+                    <div class="modal fade" id="user6Modal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                                            class="glyphicon glyphicon-trash"></span></button>
+                                    <h4 class="modal-title">Delete User</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete user?.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+        <!-- Footer here -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About</h6>
+                        <p class="text-justify"><strong><a href="#">Company X</a></strong><i> Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit. Fugiat consectetur natus corrupti porro aliquid necessitatibus
+                                architecto error reprehenderit modi eius aperiam neque quas possimus, vero distinctio
+                                asperiores explicabo excepturi perspiciatis.</i></p>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">C++</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us </a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Contribute</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                            <a href="#">Company <span class="glyphicon glyphicon-remove"></span></a>.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Imports -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+<!--<p><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">More Info.</button> 
+      <div class="dropdown-menu" >
+                 
+      </div>-->
